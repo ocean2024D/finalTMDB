@@ -20,6 +20,7 @@
 }
 
 .sliderLatest, .sliderResult, .sliderGenre {
+  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -57,7 +58,6 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
-  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -68,6 +68,8 @@ body {
   line-height: 43.16px;
   color: #ffffff;
   flex-grow: 1;
+  padding-left: 100px;
+  margin: 0 auto;
 }
 
 .containerNavbar span {
@@ -80,9 +82,12 @@ body {
 }
 
 .containerNavbar ul {
+  width: 374px;
   display: flex;
   gap: 5px;
   justify-content: space-between;
+  padding-right: 100px;
+  margin: 0 auto;
 }
 
 .containerNavbar a {
