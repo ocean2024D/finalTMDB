@@ -19,7 +19,13 @@
   transform: scale(1.05);
 }
 
-.sliderLatest, .sliderResult, .sliderGenre {
+html {
+  scroll-behavior: smooth;
+}
+
+.sliderLatest,
+.sliderResult,
+.sliderGenre {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
@@ -152,7 +158,7 @@ body {
   outline: none;
   margin: 0;
   padding: 0 10px;
-  z-index: 2;
+  z-index: 1;
   text-align: center;
 }
 
@@ -173,10 +179,11 @@ h2 {
 }
 
 .info-container {
+  position: relative;
   width: 100%;
   height: auto;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .info {
@@ -195,12 +202,22 @@ h2 {
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
+  pointer-events: none;
+}
+.info .star {
+  width: 35px;
+  height: 34px;
+  top: 539px;
+  left: 828px;
+  gap: 0px;
+  opacity: 0px;
 }
 
 .info-container:hover .info {
   opacity: 1;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .dropbtn {
@@ -275,7 +292,6 @@ h2 {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -287,11 +303,93 @@ h2 {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #000000;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 100%;
+  width: 410px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 1000;
+  padding: 60px;
+}
+.modal-content a {
+  text-decoration: none;
+  color: #730000;
+}
+
+.container {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.signUp {
+  text-align: center;
+  width: 146px;
+  height: 54px;
+  border-radius: 0px 8px 8px 0px;
+  border-radius: 8px 0px 0px 0px;
+  background-color: #000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.78px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.login {
+  width: 146px;
+  height: 54px;
+  border-radius: 0px 8px 8px 0px;
+  border-radius: 8px 0px 0px 0px;
+  background-color: #cc0000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.78px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-align: center;
+}
+
+.signUp-Register-Group {
+  text-align: center;
+  font-family: Inria Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.78px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.check {
+  color: #aaaaaa;
 }
 
 /* The Close Button */
@@ -309,6 +407,29 @@ h2 {
   cursor: pointer;
 }
 
+.username,
+.password,
+.submit {
+  width: 288px;
+  height: 44px;
+  border-radius: 8px 0px 0px 0px;
+}
+
+.submit {
+  background-color: #cc0000;
+  width: 288px;
+  height: 47px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  font-family: Inria Sans;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.98px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-align: center;
+}
+
 /* //POPUPMOVIE */
 .modal2 {
   position: fixed;
@@ -322,10 +443,11 @@ h2 {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
+  overflow: auto;
 }
 
 .modal2-content {
-  z-index: 1000;
+  z-index: 1001;
   position: relative;
   background-color: #000;
   width: 100%;
@@ -355,7 +477,7 @@ h2 {
 .imageOfFilm {
   width: 234px;
   height: auto;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   max-width: 100%;
 }
 
@@ -368,17 +490,17 @@ h2 {
   font-family: "Inria Sans", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #CC0000;
+  color: #cc0000;
 }
 
 .cast {
-  color: #E9E9E9;
+  color: #e9e9e9;
 }
 
 .date,
 .genres,
 .Actors {
-  color: #E9E9E9;
+  color: #e9e9e9;
   font-family: "Inria Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -387,14 +509,14 @@ h2 {
 }
 
 .overview {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Inria Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
 .point {
-  color: #CC0000;
+  color: #cc0000;
   font-size: 20px;
 }
 

@@ -18,18 +18,18 @@
             <span>BE</span>MOVIES
         </div>
         <ul class="navItems">
-            <li><a href="#">search</a></li>
-            <li><a href="#">latest</a></li>
-            <li><a href="#">genres</a></li>
+            <li><a href="#search">search</a></li>
+            <li><a href="#sliderLatest">latest</a></li>
+            <li><a href="#sliderGenre">genres</a></li>
             <li><button id="registerBtn" class="register-Signin">register</button></li>
             <li><button id="signinBtn" class="register-Signin">signin</button></li>
         </ul>
     </div>
     <!-- //SEARCHBOX -->
-    
+
     <div class="search-container">
         <label for="search"></label>
-        <input id="search" type="text" class="search-input" placeholder="Search..." >
+        <input id="search" type="text" class="search-input" placeholder="Search...">
         <button id="searchButton" class="search-button" type="button"></button>
     </div>
 
@@ -40,7 +40,7 @@
     <div class="sliderResult">
         <h3 class="result">Result for ''</h3>
         <div class="splideContainer">
-            <div id="slider1" class="splide" aria-label="Movie Slider">
+            <div  id="slider1" class="splide" aria-label="Movie Slider">
                 <div class="splide__track">
                     <div class="cards splide__list">
                         <div class="card splide__slide">
@@ -51,9 +51,8 @@
                                     <h1 class="title">The Godfather part III</h1>
                                     <h2 class="date">1990</h2>
                                     <h3 class="genres">Crime / Drama / Thriller</h3>
-                                    <!-- <h4 class="info-star">
-                                                <img src="star.png" alt="Star rating">
-                                            </h4> -->
+                                   
+                                     
                                     <span class="info-point">7.4</span>
                                 </div>
                             </div>
@@ -73,7 +72,7 @@
 
 
 
-    <div class="sliderLatest">
+    <div id="sliderLatest" class="sliderLatest">
         <h3>latest releases</h3>
         <div id="slider2" class="splide" aria-label="Splide Basic HTML Example">
             <div class="splide__track">
@@ -106,10 +105,11 @@
     </div>
     </div>
 
-    <div class="sliderGenre">
+    <div id="sliderGenre" class="sliderGenre">
         <h3>Movies by genre
-              <hr></h3>
-        
+            <hr>
+        </h3>
+
         <!-- //DROPDOWNS  navbar list menu I have to fix a small problem here-->
         <div class="drop-container">
             <div class="dropdown">
@@ -209,12 +209,11 @@
             <span>BE</span>Movies
         </div>
         <ul class="navItems">
-            <li><a href="#">search</a></li>
-            <li><a href="#">latest</a></li>
-            <li><a href="#">genres</a></li>
+            <li><a href="#search">search</a></li>
+            <li><a href="#sliderLatest">latest</a></li>
+            <li><a href="#sliderGenre">genres</a></li>
             <li><button id="registerBtn" class="register-Signin">register</button></li>
             <li><button id="signinBtn" class="register-Signin">signin</button></li>
-           
         </ul>
         <div class="copyright"> <a href="/">@2023 - All rights reserved</a></div>
 
@@ -222,34 +221,34 @@
 
 
 
-    <!-- //POPUP register -->
+    <!-- //POPUP register // SINUP-->
 
     <div id="myModal" class="modal">
 
         <div class="modal-content">
             <span class="close">&times;</span>
-
-            <button>SIGNUP</button>
-            <button>LOGIN</button>
+            <div class="signUp-Register-Group">
+                <button class="signUp">SIGNUP</button>
+                <button class="login">LOGIN</button>
+            </div>
             <div>
-                <input type="text" name="Username" placeholder="Username">
-                <input type="password" name="Password" placeholder="Username">
+
                 <form action="/" method="post">
                     <div class="container">
-                        <label for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-                        <button type="submit">Login</button>
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <input class="username" type="text" placeholder="Enter Username" name="uname" required>
+                        <input class="password" type="password" placeholder="Enter Password" name="psw" required>
+                        <button class="submit" type="submit">Login</button>
+                        <label for="remember">
+                            <input class="check" type="checkbox" checked="checked" name="remember">Remember me
                         </label>
+                        <h2><a href="/"> I forgot my password</a></h2>
+                        <h2> Not a member yer ? <span><a href="/">Sign up</a></span></h2>
                     </div>
                 </form>
             </div>
-        </div>
+    
 
-
+        </div>  </div>
 
         <!-- //popup movie -->
         <button id="modal2-Btn">Open Modal</button>
@@ -306,9 +305,9 @@
                 }
             });
         </script>
-     
+
         <script src="script2.js"></script>
-<script src="thy.js"></script>
+        <script src="thy.js"></script>
 
 
 </body>
