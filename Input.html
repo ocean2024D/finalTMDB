@@ -1,0 +1,66 @@
+<body>
+    <style>
+        .search-container{
+            position: relative;
+            width: 272px;
+            height: 44px;
+            border-radius: 0px 8px 8px 0px;
+    margin: 0 auto;
+
+        }
+
+        .search-input{
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px 100px 10px 20px;
+            line-height: 1;
+            box-sizing: border-box;
+          
+            border-radius: 8px;
+
+            box-shadow: 4px 8px 20px 0px #00000040;
+
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #000000;
+            overflow: hidden;
+        }
+
+        .search-button{
+      
+            width: 44px;
+            height: 40px;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 0px 8px 8px 0px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            bottom: 3px;
+            border: 0;
+            background-image: url(arrow.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgb(255, 6, 6);
+            color: #fdfcfc;
+            outline: none;
+            margin: 0;
+            padding: 0 10px;
+            z-index: 2;
+            text-align: center;
+        }
+    </style>
+
+    <div class="search-container">
+        <label for="search"></label>
+        <input id="search" type="text" class="search-input" placeholder="Search..." >
+        <button class="search-button" type="button"></button>
+    </div>
+</body>
+
+</html>
+
