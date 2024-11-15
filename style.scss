@@ -1,28 +1,54 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --rad: 0.7rem;
+  --dur: 0.3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #cc0000;
+  --font-fam: "Lato", sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #191b20;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
 .cards {
   display: flex;
-  padding: 20px;
-  gap: 20px;
-
+  padding: 10px;
   .card {
     z-index: 1;
     position: relative;
-
-    img {
-      z-index: 1;
-      width: 100%;
-
-      transition: transform 0.3s ease;
-      height: 351px;
-      object-fit: cover;
-
-      &:hover {
-        // opacity: 0.1;
-        transform: scale(1.05);
-      }
-    }
+    overflow: hidden;
   }
 }
-
+.image {
+  gap: 6px;
+  z-index: 1;
+  width: 100%;
+  width: 234px;
+  height: 351px;
+  transition: transform 0.3s ease;
+  height: 351px;
+  object-fit: cover;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -30,18 +56,39 @@ html {
 .sliderResult,
 .sliderGenre {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1075px;
   margin: 0 auto;
- 
 }
 
 .sliderGenre {
-  text-align: center;
-  margin-bottom: 50px;
+  max-width: 1075px;
+  height: auto;
 
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
   h3 {
     margin-bottom: 50px;
     margin-top: 50px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+
+    li {
+      list-style: none;
+      padding: 3px;
+
+      &:hover {
+        background-color: #cc0000;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
   }
 
   hr {
@@ -50,6 +97,44 @@ html {
     margin-top: 20px;
   }
 }
+//Arrows
+//________________________________________________________________
+
+.splide__arrow--next  {
+  display: none;
+}
+
+.splide__arrow--prev  {
+  display: none;
+}
+.splide__arrow--prev {
+  border: 2px solid #737373;
+  width: 26px;
+  height: 26px;
+  background-image: url(arrow2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #e10000;
+  left: -50px;
+  z-index: 1000;
+}
+.splide__arrow--next {
+  border: 2px solid #a20000;
+  width: 26px;
+  height: 26px;
+  background-image: url(arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #000;
+  right:-50px;
+}
+.splide__arrow--prev:active{
+  background-color: #fffffa;
+  z-index: 1000;
+  opacity: 2;
+  border: 2px solid brown;
+}
+//________________________________________________________________
 
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Black+Han+Sans&family=Creepster&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap");
 body {
@@ -211,14 +296,13 @@ h2 {
   text-align: center;
   overflow: hidden;
   pointer-events: none;
-  .star{
+  .Info-Star {
     width: 35px;
-height: 34px;
-top: 539px;
-left: 828px;
-gap: 0px;
-opacity: 0px;
-
+    height: 34px;
+    top: 539px;
+    left: 828px;
+    gap: 0px;
+    opacity: 0px;
   }
 }
 
@@ -226,78 +310,8 @@ opacity: 0px;
   opacity: 1;
   cursor: pointer;
   pointer-events: auto;
-  
 }
 
-
-//________________________________________________________________________________
-.dropbtn {
-  color: rgb(0, 0, 0);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.36px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #a10101;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #5b5757;
-  min-width: 100px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  z-index: 1000;
-}
-
-.show {
-  display: block;
-}
-
-.drop-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.36px;
-  text-align: center;
-}
-
-.dropdown-content {
-  display: none;
-}
-
-.dropdown-content.show {
-  display: block;
-}
 //________________________________________________________________________________
 .modal {
   display: none;
@@ -307,7 +321,7 @@ opacity: 0px;
   left: 0;
   top: 0;
   width: 100%;
-height: 100%;
+  height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
@@ -328,7 +342,7 @@ height: 100%;
   gap: 10px;
   z-index: 1000;
   padding: 60px;
-  a{
+  a {
     text-decoration: none;
     color: #730000;
   }
@@ -441,11 +455,14 @@ height: 100%;
 }
 
 /* //POPUPMOVIE */
+
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Black+Han+Sans&family=Creepster&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap");
+
 .modal2 {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -453,15 +470,17 @@ height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
-  overflow: auto;
 }
 
 .modal2-content {
-  z-index: 1001;
+  z-index: 1000;
   position: relative;
   background-color: #000;
+
   width: 100%;
-  max-width: 600px;
+  max-width: 742px;
+  height: 526px;
+
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -494,8 +513,14 @@ height: 100%;
 .detail {
   flex: 1;
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
+.star {
+  width: 26px;
+  height: 26px;
+}
 .title {
   font-family: "Inria Sans", sans-serif;
   font-size: 24px;
@@ -514,10 +539,11 @@ height: 100%;
   font-family: "Inria Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  padding: 0;
   margin: 0;
 }
-
+.genres {
+  text-transform: uppercase;
+}
 .overview {
   color: #ffffff;
   font-family: "Inria Sans", sans-serif;
@@ -540,3 +566,6 @@ height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
+.splide__arrow .splide__arrow--next {
+  width: 300px;
+}
