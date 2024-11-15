@@ -2,29 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root {
-  --rad: 0.7rem;
-  --dur: 0.3s;
-  --color-dark: #2f2f2f;
-  --color-light: #fff;
-  --color-brand: #cc0000;
-  --font-fam: "Lato", sans-serif;
-  --height: 5rem;
-  --btn-width: 6rem;
-  --bez: cubic-bezier(0, 0, 0.43, 1.49);
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: #191b20;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 
 
 .cards {
@@ -43,7 +20,7 @@ html {
   width: 234px;
   height: 351px;
   transition: transform 0.3s ease;
-  height: 351px;
+  
   object-fit: cover;
   &:hover {
     transform: scale(1.05);
@@ -100,18 +77,18 @@ html {
 //Arrows
 //________________________________________________________________
 
-.splide__arrow--next  {
+.splide__arrow--next svg {
   display: none;
 }
 
-.splide__arrow--prev  {
+.splide__arrow--prev svg {
   display: none;
 }
 .splide__arrow--prev {
   border: 2px solid #737373;
   width: 26px;
   height: 26px;
-  background-image: url(arrow2.png);
+  background-image: url(arrowPrev.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #e10000;
@@ -122,18 +99,18 @@ html {
   border: 2px solid #a20000;
   width: 26px;
   height: 26px;
-  background-image: url(arrow.png);
+  background-image: url(arrownext.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #000;
   right:-50px;
 }
-.splide__arrow--prev:active{
-  background-color: #fffffa;
-  z-index: 1000;
-  opacity: 2;
-  border: 2px solid brown;
-}
+// .splide__arrow--prev:active{
+//   background-color: #fffffa;
+//   z-index: 1000;
+//   opacity: 2;
+//   border: 2px solid brown;
+// }
 //________________________________________________________________
 
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Black+Han+Sans&family=Creepster&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap");
@@ -271,8 +248,9 @@ h2 {
 
 .info-container {
   position: relative;
-  width: 100%;
-  height: auto;
+  width: 234px;
+  height: 351px;
+
   position: relative;
   // overflow: hidden;
   z-index: 1;
@@ -562,10 +540,11 @@ h2 {
     flex-direction: column;
     text-align: center;
     padding: 15px;
+ 
   }
 }
-
-/*# sourceMappingURL=style.css.map */
 .splide__arrow .splide__arrow--next {
   width: 300px;
 }
+/*# sourceMappingURL=style.css.map */
+
